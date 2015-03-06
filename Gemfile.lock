@@ -136,6 +136,7 @@ DEPENDENCIES
   mysql2
   rails (= 4.1.8)
   rails_12factor
+  rake
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

@@ -46,3 +46,5 @@ end
 # Heroku integration
 gem 'rails_12factor'
 
+gem 'rake', group: :test
+
