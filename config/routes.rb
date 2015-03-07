@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace :api do
-    resources :ideas
+  namespace :v1 do
+    resources :assembly_line
   end
 end

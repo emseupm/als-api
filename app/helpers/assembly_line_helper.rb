@@ -1,0 +1,2 @@
+module AssemblyLineHelper
+end
