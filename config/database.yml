@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: root
+  username: ismael
   password:
   host: localhost
 
 development:
   <<: *default
-  database: api_development
+  database: emse_als
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
