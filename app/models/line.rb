@@ -1,2 +1,2 @@
-class V1::Line < ActiveRecord::Base
+class Line < ActiveRecord::Base
 end
