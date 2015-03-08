@@ -1,5 +1,5 @@
 class Station < ActiveRecord::Base
-    has_many :line
+    has_many :lines
     
     belongs_to :assembly_line
 end
