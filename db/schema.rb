@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150307205116) do
+ActiveRecord::Schema.define(version: 20150307205047) do
 
   create_table "assembly_lines", force: true do |t|
     t.string   "name"
@@ -19,15 +19,16 @@ ActiveRecord::Schema.define(version: 20150307205116) do
     t.datetime "updated_at"
   end
 
+  create_table "ideas", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
   create_table "lines", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "from_station_id"
-    t.integer  "to_station_id"
   end
-
-  add_index "lines", ["from_station_id"], name: "index_lines_on_from_station_id", using: :btree
-  add_index "lines", ["to_station_id"], name: "index_lines_on_to_station_id", using: :btree
 
   create_table "stations", force: true do |t|
     t.datetime "created_at"

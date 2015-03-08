@@ -15,7 +15,7 @@ class V1::StationsController < ApplicationController
 
 
   def station_params
-    params.permit("name", "estimated_time", "assembly_line_id")
+    params.permit(:name, :estimated_time, "assembly_line_id")
   end
 
 end
