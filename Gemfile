@@ -55,3 +55,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-nav'
 end
+
+# CORS
+gem 'rack-cors', require: 'rack/cors'
