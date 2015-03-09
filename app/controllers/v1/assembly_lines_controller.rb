@@ -16,7 +16,7 @@ class V1::AssemblyLinesController < ApplicationController
     assembly_line.stations_attributes = assembly_line_params[:stations]
     assembly_line.save
 
-    render json: assembly_line
+    render json: assembly_line, status: :created
   end
 
   def destroy

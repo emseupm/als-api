@@ -92,4 +92,56 @@ RSpec.describe '/v1/assembly_lines.json', type: :request do
     end
   end
 
+  context 'create assembly line' do
+    let(:station_name) { 'Engine Setup' }
+    let(:station_estimated_time) { 2 }
+    let(:station_params) do
+      { name: station_name, estimated_time: station_estimated_time }
+    end
+    let(:assembly_line_name) { 'Ford Focus' }
+    let(:assembly_line_params) do
+      { name: assembly_line_name, stations: [ station_params ] }
+    end
+
+    def make_request
+      post '/v1/assembly_lines.json', assembly_line_params
+    end
+
+    it do
+      make_request
+      expect(response.status).to be(201)
+    end
+
+    context 'creates a new assembly line object' do
+      let(:assembly_line) { AssemblyLine.last }
+
+      it do
+        expect { make_request }.to change(AssemblyLine, :count).by(1)
+      end
+
+      it '.name' do
+        make_request
+        expect(assembly_line.name).to eq(assembly_line_name)
+      end
+
+      context 'creates a new station object' do
+        let(:station) { assembly_line.stations.first }
+
+        it do
+          expect { make_request }.to change(Station, :count).by(1)
+        end
+
+        it '.name' do
+          make_request
+          expect(station.name).to eq(station_name)
+        end
+
+        it '.estimated_time' do
+          make_request
+          expect(station.estimated_time).to eq(station_estimated_time)
+        end
+      end
+    end
+  end
+
 end
