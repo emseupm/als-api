@@ -39,6 +39,7 @@ class V1::InventoriesController < ApplicationController
 		inventory.update_attributes(
 			:stock => inventory[:stock]+1
 		)
+		render json: inventory, status: :updated
 	end
 
 	def remove_stock
@@ -47,6 +48,7 @@ class V1::InventoriesController < ApplicationController
 			inventory.update_attributes(
 				:stock => inventory[:stock]-1
 			)
+			render json: inventory, status: :updated
 		end
 	end
 
