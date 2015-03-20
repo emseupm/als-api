@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>104</x>
+      <y>40</y>
+      <w>584</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>//Stop simulation will stand for Finish and record current Assembly Line simulation as a final step
+title: Stop simulation
+_User~id1_|_UI~id2_|_Simulator~id3_|_APISimulator~id4_
+id1-&gt;&gt;id2:id1,id2:Click on finish
+id2-&gt;&gt;id3:id2,id3:Finish()
+id3-&gt;&gt;id4:id3,id4:Send(SimTIme,StationTimes)
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

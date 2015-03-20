@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>0</x>
+      <y>16</y>
+      <w>928</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>//Show Simulation Status will show the following elements:
+//- Current station higlighted
+//- Total simulation time
+//- Station time, a dual-single value in seconds:
+//		a. Remaining time to complete station task.
+//		b. Delayed time spend in station.
+
+title: Show simulation status
+_User~id1_|_UI~id2_|_Simulator~id3_|_SimTime~id4_|_StationTime:StationTimeX~id5_
+id1-&gt;&gt;id2:id1,id2:View screen
+id2-&gt;&gt;id3:id2,id3:ShowSimCurrentStatus()
+id3-&gt;&gt;id4:id3,id4:getTime()
+id4.&gt;id3:id4,id3:SimTime
+id3-&gt;&gt;id5:id3,id5:getTime()
+id5.&gt;id3:id3,id5:StationTime
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

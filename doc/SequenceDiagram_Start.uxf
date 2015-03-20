@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <help_text/>
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>16</x>
+      <y>16</y>
+      <w>912</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>title: Start Simulation
+_User~id1_|_UI~id2_|_Simulator~id3_|_SimTime~id4_|_StationTime:StationTime1~id5_
+id1-&gt;&gt;id2:id1,id2:Click on start
+id2-&gt;&gt;id3:id2,id3:Init()
+id3-&gt;&gt;id4:id3,id4:Create()
+id3-&gt;&gt;id5:id3,id5:Create()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
