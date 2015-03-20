@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150311151051) do
+ActiveRecord::Schema.define(version: 20150320204823) do
 
   create_table "assembly_lines", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ideas", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "inventories", force: true do |t|
@@ -31,6 +37,25 @@ ActiveRecord::Schema.define(version: 20150311151051) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "simulations", force: true do |t|
+    t.integer  "elapsed_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "assembly_line_id"
+  end
+
+  add_index "simulations", ["assembly_line_id"], name: "index_simulations_on_assembly_line_id", using: :btree
+
+  create_table "station_results", force: true do |t|
+    t.integer  "elapsed_time"
+    t.integer  "delay_time"
+    t.integer  "simulation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "station_results", ["simulation_id"], name: "index_station_results_on_simulation_id", using: :btree
 
   create_table "stations", force: true do |t|
     t.datetime "created_at"
