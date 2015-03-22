@@ -4,7 +4,7 @@
   <element>
     <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>220</x>
+      <x>110</x>
       <y>110</y>
       <w>210</w>
       <h>190</h>
@@ -12,7 +12,7 @@
     <panel_attributes>AssemblyLine
 --
 -simulation: Simulations
-
+-name:String
 --
 
 </panel_attributes>
@@ -21,52 +21,52 @@
   <element>
     <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>570</x>
+      <x>420</x>
       <y>110</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>AssemblyLine
+    <panel_attributes>Simulation
 --
 -Overall_Time
 
 --
-+SaveResult()
++Save()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>570</x>
+      <x>420</x>
       <y>430</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>Station Result
+    <panel_attributes>StationResult
 --
--Elapsed_Time
--Delay_Time
--Simulation
--Station
+-Elapsed_Time:Integer
+-Delay_Time:Integer
+-Simulation:Integer
+-Station:Integer
 
 --
-
++Save()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.baselet.element.old.element.Class</type>
     <coordinates>
-      <x>240</x>
+      <x>130</x>
       <y>430</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
     <panel_attributes>Station
 --
-
-
+-name:String
+-Estimated_Time:Integer
 --
 
 </panel_attributes>
@@ -75,43 +75,88 @@
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>400</x>
+      <x>290</x>
       <y>180</y>
-      <w>190</w>
+      <w>150</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..n
-m2=1
+m1=1
+m2=0...n
 </panel_attributes>
-    <additional_attributes>30;30;170;30</additional_attributes>
+    <additional_attributes>30;30;130;30</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>640</x>
+      <x>490</x>
       <y>270</y>
       <w>50</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=1..n
-m2=1
+m1=1
+m2=1..n
 </panel_attributes>
     <additional_attributes>30;30;30;160</additional_attributes>
   </element>
   <element>
     <type>com.baselet.element.old.element.Relation</type>
     <coordinates>
-      <x>420</x>
+      <x>310</x>
       <y>500</y>
-      <w>170</w>
+      <w>130</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
-m1=0..n
-m2=1
+m1=1
+m2=0..n
 </panel_attributes>
-    <additional_attributes>30;30;150;30</additional_attributes>
+    <additional_attributes>30;30;110;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>720</x>
+      <y>110</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>SimulationController
+--
+
+
+--
++index()
++show()
++create()
+-simulation_params()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>600</x>
+      <y>180</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>30;30;120;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>200</x>
+      <y>270</y>
+      <w>50</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n</panel_attributes>
+    <additional_attributes>30;30;30;160</additional_attributes>
   </element>
 </diagram>

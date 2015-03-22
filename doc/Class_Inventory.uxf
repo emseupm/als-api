@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>20</y>
+      <w>280</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Inventory&gt;&gt;
+--
+- name: String
+- stock: Int
+- created_at: Date
+- updated_at: Date
+
+--
+
++ GET /inventories#index
++ POST /inventories#create
++ DELETE /inventories#destroy
++ GET /inventories#show
++ GET /inventories#add_stock
++ GET /inventories#remove_stock
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

@@ -4,19 +4,20 @@
   <element>
     <type>com.baselet.element.old.allinone.SequenceDiagram</type>
     <coordinates>
-      <x>104</x>
-      <y>40</y>
-      <w>584</w>
-      <h>160</h>
+      <x>0</x>
+      <y>32</y>
+      <w>1312</w>
+      <h>232</h>
     </coordinates>
     <panel_attributes>//Stop simulation will stand for Finish and record current Assembly Line simulation as a final step
 title: Stop simulation
-_User~id1_|_UI~id2_|_Simulator~id3_|_APISimulator~id4_
-id1-&gt;&gt;id2:id1,id2:Click on finish
-id2-&gt;&gt;id3:id2,id3:Finish()
-id3-&gt;&gt;id4:id3,id4:Send(SimTIme,StationTimes)
-
-
+User~id1|_AssemblyLine &lt;&lt;UI&gt;&gt;~id2_|_Simulator &lt;&lt;controler&gt;&gt;~id3_|_SimulationResults &lt;&lt;UI&gt;&gt;~id4_|_SimulatorController~id5_|_Simulation~id6_|_StationResult~id7_
+id1-&gt;&gt;id2:id2:Click on finish button
+id2-&gt;&gt;id3:id2,id3:FinishSimulation()
+id3-&gt;&gt;id4:id3,id4:getResults():SimTime,StationTimes
+id3-&gt;&gt;id5:id3,id5:sendResults(SimTime,StationTimes)
+id5-&gt;&gt;id6:id5,id6:save(simTime)
+id5-&gt;&gt;id7:id5,id7:save(stationTimes)
 </panel_attributes>
     <additional_attributes/>
   </element>
