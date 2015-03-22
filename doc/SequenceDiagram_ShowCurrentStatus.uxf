@@ -5,9 +5,9 @@
     <type>com.baselet.element.old.allinone.SequenceDiagram</type>
     <coordinates>
       <x>0</x>
-      <y>16</y>
-      <w>928</w>
-      <h>232</h>
+      <y>64</y>
+      <w>920</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>//Show Simulation Status will show the following elements:
 //- Current station higlighted
@@ -17,14 +17,12 @@
 //		b. Delayed time spend in station.
 
 title: Show simulation status
-_User~id1_|_UI~id2_|_Simulator~id3_|_SimTime~id4_|_StationTime:StationTimeX~id5_
-id1-&gt;&gt;id2:id1,id2:View screen
-id2-&gt;&gt;id3:id2,id3:ShowSimCurrentStatus()
-id3-&gt;&gt;id4:id3,id4:getTime()
-id4.&gt;id3:id4,id3:SimTime
-id3-&gt;&gt;id5:id3,id5:getTime()
-id5.&gt;id3:id3,id5:StationTime
-
+User~id1|_AssemblyLine &lt;&lt;UI&gt;&gt;~id2_|_SimTimer &lt;&lt;UI&gt;&gt;~id3_|_StationTimer1:StationTimer &lt;&lt;UI&gt;&gt;~id4_
+id1-&gt;&gt;id2:id2:View screen
+id2-&gt;&gt;id3:id2,id3:ShowSimTimer()
+id3.&gt;id2:id3,id2:SimTime
+id2-&gt;&gt;id4:id2,id4:ShowStationTimer()
+id4.&gt;id2:id2,id4:stationTime
 </panel_attributes>
     <additional_attributes/>
   </element>
