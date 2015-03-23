@@ -26,9 +26,9 @@ class V1::SimulationsController < ApplicationController
   def simulation_params
     params.permit(
       :assembly_line_id,
-      :elapsed_time, 
-      :station_results => [
-        :elapsed_time, :delay_time
+      :elapsed_time,
+      station_results: [
+        :station_id, :elapsed_time, :delay_time
       ]
     )
   end
