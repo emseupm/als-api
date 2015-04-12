@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.2">
   <help_text/>
-  <zoom_level>8</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <type>com.baselet.element.old.allinone.SequenceDiagram</type>
     <coordinates>
-      <x>0</x>
-      <y>120</y>
-      <w>1152</w>
-      <h>232</h>
+      <x>10</x>
+      <y>140</y>
+      <w>970</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>title: Start Simulation
-User~id1|_AssemblyLine &lt;&lt;UI&gt;&gt;~id2_|_Simulator &lt;&lt;Controler&gt;&gt;~id3_|_SimTimer &lt;&lt;UI&gt;&gt;~id4_|_StationTimer1:StationTimer &lt;&lt;UI&gt;&gt;~id5_
-id1-&gt;&gt;id2:id2:Click on start button
-id2-&gt;&gt;id3:id2,id3:StartSimulation()
-id3-&gt;&gt;id4:id3,id4:&lt;&lt;create&gt;&gt;
-id3-&gt;&gt;id4:id3,id4:Start()
-id3-&gt;&gt;id5:id3,id5:&lt;&lt;create&gt;&gt;
-id3-&gt;&gt;id5:id3,id5:Start()</panel_attributes>
+User~id1|_:UI~id2_|_SimulatorController~id3_|_SimTimer~id4_|_:StationTimer1~id5_
+id1-&gt;id2:id2:Click on "Start" button
+id2-&gt;&gt;&gt;id3:id2,id3:StartSimulation()
+id3-&gt;&gt;&gt;id4:id3,id4:&lt;&lt;create&gt;&gt;
+id3-&gt;&gt;&gt;id4:id3,id4:Start()
+id3-&gt;&gt;&gt;id5:id3,id5:&lt;&lt;create&gt;&gt;
+id3-&gt;&gt;&gt;id5:id3,id5:Start()</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

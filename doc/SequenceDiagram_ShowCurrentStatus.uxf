@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.2">
-  <zoom_level>8</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <type>com.baselet.element.old.allinone.SequenceDiagram</type>
     <coordinates>
-      <x>0</x>
-      <y>64</y>
-      <w>920</w>
-      <h>208</h>
+      <x>150</x>
+      <y>80</y>
+      <w>650</w>
+      <h>200</h>
     </coordinates>
     <panel_attributes>//Show Simulation Status will show the following elements:
 //- Current station higlighted
@@ -17,12 +17,10 @@
 //		b. Delayed time spend in station.
 
 title: Show simulation status
-User~id1|_AssemblyLine &lt;&lt;UI&gt;&gt;~id2_|_SimTimer &lt;&lt;UI&gt;&gt;~id3_|_StationTimer1:StationTimer &lt;&lt;UI&gt;&gt;~id4_
-id1-&gt;&gt;id2:id2:View screen
-id2-&gt;&gt;id3:id2,id3:ShowSimTimer()
+User~id1|_:UI~id2_|_SimTimer~id3_|_:StationTimerX~id4_
+id1-&gt;id2:id2:View screen
 id3.&gt;id2:id3,id2:SimTime
-id2-&gt;&gt;id4:id2,id4:ShowStationTimer()
-id4.&gt;id2:id2,id4:stationTime
+id4.&gt;id2:id2,id4:stationTimeX
 </panel_attributes>
     <additional_attributes/>
   </element>
