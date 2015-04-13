@@ -27,7 +27,7 @@ class V1::AssemblyLinesController < ApplicationController
   end 
 
   def assembly_line_params
-    params.permit(:id, :name, :stations => [:name, :estimated_time])
+    params.permit(:id, :name, :icon, :stations => [:name, :estimated_time])
   end
 
 end
