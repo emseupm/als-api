@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.2">
-  <zoom_level>8</zoom_level>
+  <zoom_level>11</zoom_level>
   <element>
     <type>com.baselet.element.old.allinone.SequenceDiagram</type>
     <coordinates>
-      <x>144</x>
-      <y>128</y>
-      <w>600</w>
-      <h>184</h>
+      <x>0</x>
+      <y>165</y>
+      <w>1034</w>
+      <h>319</h>
     </coordinates>
     <panel_attributes>title: Next station
-User~id1|_:UI~id2_|_SimulatorController~id3_|_:StationTimerX~id4_
+User~id1|_:UI~id2_|_SimulatorController~id3_|_:StationTimerX~id4_|_:StationTimerX+1~id5_
 id1-&gt;&gt;&gt;id2:id2:Click on "Next" button
 id2-&gt;&gt;&gt;id3:id2,id3:NextStation()
 id3-&gt;&gt;&gt;id4:id3,id4:stopTimer()
-id3-&gt;&gt;&gt;id3:id3,id3:IncreaseStationId()
-
+id3-&gt;&gt;&gt;id3:id3,id3:NextStation()
+id3-&gt;&gt;&gt;id5:id3,id5:&lt;&lt;create&gt;&gt;
+id3-&gt;&gt;&gt;id5:id3,id5:start()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>672</x>
-      <y>288</y>
-      <w>16</w>
-      <h>16</h>
+      <x>715</x>
+      <y>352</y>
+      <w>22</w>
+      <h>22</h>
     </coordinates>
     <panel_attributes>type=termination</panel_attributes>
     <additional_attributes/>
